@@ -14,13 +14,13 @@
 
 ## 分支规范
 
-格式：`<分支类型>/<日期>-<开发内容>`，例如 `feat/20260913-员工列表分页`。
+格式：`<branch-type>/<date>-<work-summary>`，例如 `feat/20260929-data-structure-refactor`。
 
 ### 命名规则
 
-- **分支类型**：与本仓库提交信息规范的 type 一致，只能用 `feat`、`fix`、`docs`、`style`、`refactor`、`perf`、`test`、`build`、`ci`、`chore`、`revert`。日常开发最常用 `feat`、`fix`、`chore`、`docs`。
-- **日期**：分支创建当天的日期，格式 `YYYYMMDD`，如 `20260913`。
-- **开发内容**：简短概括本次开发（建议不超过 15 字），与提交主题同语言、以中文为主，可含必要英文技术词（如 `token`、`echarts`）；多词之间用 `-` 连接。
+- **branch type**：与本仓库提交信息规范的 type 一致，只能用 `feat`、`fix`、`docs`、`style`、`refactor`、`perf`、`test`、`build`、`ci`、`chore`、`revert`。日常开发最常用 `feat`、`fix`、`chore`、`docs`。
+- **date**：分支创建当天的日期，格式 `YYYYMMDD`，如 `20260929`。
+- **work summary**：使用英文小写短语简要概括本次开发；多个单词以 `-` 连接，建议不超过 40 个字符，例如 `data-structure-refactor`。
 - **禁止字符**：不含空格，不含 Git 不允许的 `~ ^ : ? * [` `\\`、连续 `..`，不以 `/` 结尾、不以 `.lock` 结尾。
 
 ### 使用约束
@@ -29,8 +29,6 @@
 - **从最新基线切出**：先 `git switch main && git pull` 拉到最新，再切出新分支。
 - **及时收敛**：开发完成并经用户验收后，合并回 `main`，随后删除本地与远程功能分支，不长期滞留；提交与合并由用户手动执行，agent 不主动提交（见守则 11）。
 - **与提交信息联动**：分支内的提交 type/scope 与分支类型保持一致，提交信息遵循 `.trae/rules/git-commit-message.md`。
-
-本仓库当前尚无首个提交；远端 `main` 建立并同步后，再按上述流程从最新基线切出分支。
 
 ## Agent skills
 
